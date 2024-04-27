@@ -2,25 +2,6 @@ import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
-const options = {
-  enableTime: true,
-  time_24hr: true,
-  defaultDate: new Date(),
-  minuteIncrement: 1,
-  onClose(selectedDates) {
-    console.log("Val:", selectedDates[0]);
-  },
-};
-flatpickr("#datetime-picker", options);
-
-//Identification for dynamic elements
-const inputData = document.querySelector("#datetime-picker")
-const startBtn = document.querySelector("[data-start]");
-const dataDays = document.querySelector("[data-days]")
-const dataHours = document.querySelector("[data-hours]")
-const dataMinutes = document.querySelector("[data-minutes]")
-const dataSeconds = document.querySelector("[data-seconds]")
-
 //For style
 const timerContainer = document.querySelector(".timer");   
     timerContainer.style.display = 'flex';
@@ -47,8 +28,24 @@ for (const detail of detailSpace) {
     detail.style.textTransform = 'uppercase';
 }
 
+const options = {
+  enableTime: true,
+  time_24hr: true,
+  defaultDate: new Date(),
+  minuteIncrement: 1,
+  onClose(selectedDates) {
+    console.log("Val:", selectedDates[0]);
+  },
+};
+flatpickr("#datetime-picker", options);
 
-//end for css
+//Identification for dynamic elements
+const inputData = document.querySelector("#datetime-picker")
+const startBtn = document.querySelector("[data-start]");
+const dataDays = document.querySelector("[data-days]")
+const dataHours = document.querySelector("[data-hours]")
+const dataMinutes = document.querySelector("[data-minutes]")
+const dataSeconds = document.querySelector("[data-seconds]")
 
 //disable initial Start button
 startBtn.disabled = true;
