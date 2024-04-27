@@ -101,7 +101,7 @@ const timeDifference = targetDate.getTime() - currentDate.getTime();
    //return { days, hours, minutes, seconds };
      
     // For stop countdown at 0ms    
-    if (timeDifference < 1000) {
+    if (timeDifference < 0) {
     clearInterval(timerId); 
     console.log("Timp expirat") //de verificare
         }
