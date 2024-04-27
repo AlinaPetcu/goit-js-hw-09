@@ -70,7 +70,7 @@ startBtn.addEventListener("click", () => {
 
     startBtn.disabled = true; //disable  start  button
     
-    timerId = setInterval(() => {
+    const timerId = setInterval(() => {
 
 // Number of milliseconds per unit of time
 const targetDate = new Date(inputData.value);
