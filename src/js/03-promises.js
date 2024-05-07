@@ -36,12 +36,12 @@ button.addEventListener('click', e => {
     promise
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
-          `✅ Fulfilled promise ${position} in ${delay}ms`
+          `Fulfilled promise ${position} in ${delay}ms`
         );
       })
       .catch(({ position, delay }) => {
         Notiflix.Notify.failure(
-          `❌ Rejected promise ${position} in ${delay}ms`
+          `Rejected promise ${position} in ${delay}ms`
         );
       });
   });
